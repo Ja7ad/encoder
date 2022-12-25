@@ -115,7 +115,7 @@ func (*ProtoEncoder) Encode(vPtr interface{}) ([]byte, error) {
 		return proto.Marshal(v)
 	}
 
-	return nil, errors.New("data isn't proto message")
+	return nil, errors.New("vPtr isn't proto message")
 }
 
 func (*ProtoEncoder) Decode(data []byte, vPtr interface{}) error {
